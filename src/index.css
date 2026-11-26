@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+@keyframes flow-dash-slow {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-48px);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+@keyframes spin-smooth {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-flow {
+  animation: flow-dash 1s linear infinite;
+}
+
+.animate-flow-fast {
+  animation: flow-dash 0.45s linear infinite;
+}
+
+.animate-float-up {
+  animation: float-up 2s ease-out infinite;
+}
+
+.hotspot-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse-ring 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-flow,
+  .animate-flow-fast,
+  .animate-float-up,
+  .hotspot-pulse {
+    animation: none !important;
+  }
+}

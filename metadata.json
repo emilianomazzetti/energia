@@ -1,0 +1,6 @@
+{
+  "name": "Laboratorio Energia",
+  "description": "Simulazioni interattive per bambini per scoprire, costruire e far funzionare tutte le fonti di energia: sole, acqua, atomo, vento, fossili, geotermico, rifiuti e idrogeno.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
