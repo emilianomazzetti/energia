@@ -83,7 +83,7 @@ export function EnergyMapOverview({
         {showOriginalMap && (
           <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4 flex flex-col items-center">
             <img
-              src="/assets/aistudio/image_75f81d69.png"
+              src={`${import.meta.env.BASE_URL}assets/aistudio/image_75f81d69.png`}
               alt="Mappa concettuale delle Fonti e Forme di Energia"
               className="max-h-[520px] w-auto rounded-lg border border-slate-200 bg-white shadow-xs"
             />
